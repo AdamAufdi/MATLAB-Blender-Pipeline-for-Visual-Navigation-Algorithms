@@ -1,5 +1,5 @@
 # blender_sim_pipeline
 
-This respository contains all files necessary to operate the MATLAB-Python-Blender pipeline for simulating an environment in Blender and returning image features to MATLAB. 
+This respository contains all files necessary to render images in a Blender model from a pose specified in MATLAB.
 
-To test MATLAB-Python communication, open the matlab_python_interface_test scripts (one is a Python script (.py) and the other a MATLAB script (.m)). Once both are open, run the MATLAB script first. Then, run the Python script. MATLAB will send some random vectors over to Python, Python will do an operation on them and send them back. You can verify this from the MATLAB command window, which should show the vectors transmitted and the vectors received. 
+To run this script, download the MATLAB script and .blend file. Open the .blend file and navigate to the Python API script. Verify that the filepath for where images will be stored exists, then run the Blender Python API script. Then, go to MATLAB and run the script. You can view Blender render progress in the System Console, and messages will be sent from Blender back to the MATLAB command window for status updates. The rendered image will be in the specified file path, which will also be provided in a confirmation message posted in the MATLAB command window. 
